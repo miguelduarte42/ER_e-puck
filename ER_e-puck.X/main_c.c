@@ -1,4 +1,5 @@
 #include "p30f6014A.h"
+#include "main_c.h"
 
 #include "motor_led/e_epuck_ports.h"
 #include "motor_led/e_init_port.h"
@@ -12,19 +13,17 @@
 #include "uart/e_uart_char.h"
 #include "e_randb.h"
 #include "ctrhnnmultilayercontroller.h"
-#include "hierarchycalcontroller.h"
+#include "camera/fast_2_timer/e_po3030k.h"
+#include "utilities.h"
+
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-#include <time.h>
-#include "camera/fast_2_timer/e_po3030k.h"
-#include "tests.h"
-#include "main_c.h"
 
 #define BAUDRATE 115200
 
 int startSteps;
-int targetSteps = 333 - 10;//you can make it turn a bit more than 90degrees if necessary
+int targetSteps = 333 - 10; //this is around 90 degrees
 int behaviors[] = {0,0,0};
 int TURN_LEFT = 0;
 int TURN_RIGHT = 1;
@@ -42,7 +41,7 @@ float sensorReferenceValues[] = {3842.55,3774.18,1769.57,979.94,546.55,190.11,99
 float distances[] = {0,0.5,1,1.5,2,3,4,5,6,7,8,9,10,11,12};
 int numberOfDistances = 15;
 
-int forwardSpeed = 776;//10cm/s
+int forwardSpeed = 800;//10cm/s
 int turnSpeed = 80;//1cm/s
 
 float clocksPerSecond = 15000000.0;//100ms
@@ -74,110 +73,33 @@ float timeStep = 0;
 
 int leftSpeed = 0;
 int rightSpeed = 0;
-int semaforo = 0;
-
-void updateSemaforo(void);
+int flag = 0;
 
 int main() {
 
-    //system initialization
-    e_init_port();    			// configure port pins
+    //initialization
+    e_init_port();
     e_init_motors();
-    e_init_ad_scan(ALL_ADC);	// configure Analog-to-Digital Converter Module
-    e_init_uart1();// initialize UART to 115200 Kbaud
-    //e_start_agendas_processing();*/
+    e_init_ad_scan(ALL_ADC);
+    e_init_uart1();
 
     int selector = getSelector();
 
     if(selector != 0) {
-
-       /* char buffer[160*2];
-
-        e_po3030k_init_cam();
-        e_po3030k_config_cam((ARRAY_WIDTH -160)/2,(ARRAY_HEIGHT-160)/2,
-                         160,160,4,4,RGB_565_MODE);
-        e_po3030k_write_cam_registers();
-
-        e_po3030k_launch_capture(buffer);
-
-        while(1) {
-            while(!e_po3030k_is_img_ready());
-            sendString(buffer);
-        }*/
-
-        // buffer contain a 40*40 RGB picture now
-        
-
-        //checkStuff(); //check ambient light
-        //neuralNetwork();
-        
-        //neuralNetwork();
-        //regularNeuralNetwork();
-        hierarchicalNeuralNetwork();
-
-        //testProximity(2);
-
-        //checkStuff();
-
-        /*e_calibrate_ir();
-        myCalibration();
-        e_set_speed_left(776);
-        e_set_speed_right(776);
-
-        int step = 0;
-
-        while(1) {
-            sendInt(step++);
-            sendInt(e_get_calibrated_prox(0));
-            sendInt(e_get_calibrated_prox(2));
-            sendInt(e_get_calibrated_prox(5));
-            sendInt(e_get_calibrated_prox(7));
-            sendNewLine();
-        }
-
-        //testProximity(2);
-
-        if(selector == 1)
-            testProximity(0);
-        if(selector == 2)
-            testProximity(2);
-        if(selector == 3)
-            testProximity(5);
-        if(selector == 4)
-            testProximity(7);
-       
-        if(selector == 1)
-            sendProximity(0);
-        else if(selector == 2)
-            walkAwayFromWall();
-        else if(selector == 3)
-            neuralNetwork();
-        else if(selector == 4)
-            regularNeuralNetwork();
-         else if(selector == 5)
-            sendAllValues();
-        else if(selector == 6)
-            sendSensor();
-        else if(selector == 7)
-            sendAllSensors();
-        else
-           wallAvoider();*/
+        neuralNetwork();
     }
 
 }
 
 void run(void);
 
-void hierarchicalNeuralNetwork() {
+void neuralNetwork() {
 
     e_set_led(4,1);
     e_calibrate_ir();
-    myCalibration();
+    lightCalibration();
     e_set_led(4,0);
 
-    float waitTime = clocksPerSecond/10.0;
-    float diff;
-    time_t start,end;
     int selector;
     int numberOfInputNeurons = 6;
     int numberOfOutputNeurons = 3;
@@ -187,9 +109,6 @@ void hierarchicalNeuralNetwork() {
 
     while(1) {
 
-        //e_set_speed_left(0);
-        //e_set_speed_right(0);
-
         inputs[0] = 0;
         inputs[1] = 0;
         inputs[2] = 0;
@@ -197,36 +116,19 @@ void hierarchicalNeuralNetwork() {
         inputs[4] = 0;
         inputs[5] = 0;
 
-        sendDouble(0.0f);
-
         selector = getSelector();
         while(selector == getSelector());
 
-        sendDouble(2.0f);
-
-        time (&start);
-
-        /*do {
-            time (&end);
-            diff = difftime(end,start);
-            sendLong(start);
-            sendLong(end);
-            sendLong(diff);
-            sendNewLine();
-        }while(diff < waitTime*20);*/
-
-        sendDouble(1.0f);
-
         timeStep = 0;
-        HCreateNetworks(4);
-        HDefineNetwork(0,6,10,3);
-        HDefineNetwork(1,4,3,2);
-        HDefineNetwork(2,4,3,2);
-        HDefineNetwork(3,4,3,2);
-        HSetWeights(0, weights);
-        HSetWeights(1, corridor);
-        HSetWeights(2, leftturn);
-        HSetWeights(3, rightturn);
+        createNetworks(4);
+        defineNetwork(0,6,10,3);
+        defineNetwork(1,4,3,2);
+        defineNetwork(2,4,3,2);
+        defineNetwork(3,4,3,2);
+        setWeights(0, weights);
+        setWeights(1, corridor);
+        setWeights(2, leftturn);
+        setWeights(3, rightturn);
 
         outputs = malloc(numberOfOutputNeurons*sizeof(float));
         outputs[0] = 0;
@@ -234,33 +136,24 @@ void hierarchicalNeuralNetwork() {
         outputs[2] = 0;
 
         selector = getSelector();
-        time (&start);
 
-        e_activate_agenda(updateSemaforo, 1000);
+        e_activate_agenda(updateFlag, 1000);
         e_activate_agenda(readValues, 100);
         e_start_agendas_processing();
 
         while(1) {
-            while(!semaforo);
-            semaforo = 0;
-            hCycle();
+            while(!flag);
+            flag = 0;
+            annCycle();
         }
     }
 }
 
-void updateSemaforo(void) {
-    semaforo = 1;
+void updateFlag(void) {
+    flag = 1;
 }
 
-void run(void) {
-    e_set_speed_left(leftSpeed);
-    e_set_speed_right(rightSpeed);
-}
-
-void hCycle(void) {
-
-    //e_set_speed_left(leftSpeed);
-   // e_set_speed_right(rightSpeed);
+void preprogrammedCycle(void) {
 
     averageValues();
 
@@ -272,36 +165,60 @@ void hCycle(void) {
     inputs[4] = lightToInput(S_LEFT);
     inputs[5] = lightToInput(S_RIGHT);
 
-    outputs = HComputeOutputs(0, inputs);
+    outputs = computeOutputs(0, inputs);
+
+    int activeBehavior = 999;
+
+    int i;
+    for(i = 0 ; i < 3 ; i++)
+        if(behaviors[i])
+            activeBehavior = i;
+
+    int newBehavior;
+    if(activeBehavior != 999)
+        newBehavior = activeBehavior;
+    else
+        newBehavior = findMaxBehavior(outputs,3);
+
+    applyBehavior(newBehavior,inputs);
+
+    timeStep++;
+
+    resetValues();
+}
+
+void annCycle(void) {
+
+    averageValues();
+
+    inputs[0] = sensorToInput(S_FRONT_RIGHT);
+    inputs[1] = sensorToInput(S_RIGHT);
+    inputs[2] = sensorToInput(S_LEFT);
+    inputs[3] = sensorToInput(S_FRONT_LEFT);
+
+    inputs[4] = lightToInput(S_LEFT);
+    inputs[5] = lightToInput(S_RIGHT);
+
+    outputs = computeOutputs(0, inputs);
 
     int newActiveNetwork = findMaxBehavior(outputs, 3) + 1;
 
     if(newActiveNetwork != activeNetwork)
-        HResetNetwork(newActiveNetwork);
+        resetNetwork(newActiveNetwork);
 
     activeNetwork = newActiveNetwork;
 
-    outputs = HComputeOutputs(activeNetwork, inputs);
+    outputs = computeOutputs(activeNetwork, inputs);
 
     leftSpeed = (int)(forwardSpeed*(outputs[0]-0.5)*2.0);
     rightSpeed = (int)(forwardSpeed*(outputs[1]-0.5)*2.0);
-
-    //leftSpeed = 500;
-    //rightSpeed = 500;
 
     e_set_speed_left(leftSpeed);
     e_set_speed_right(rightSpeed);
 
     timeStep++;
-
-    if(((int)timeStep) % 10 == 0)
-        sendDouble(timeStep);
     
     resetValues();
-}
-
-int getSelector() {
-    return SELECTOR0 + 2*SELECTOR1 + 4*SELECTOR2 + 8*SELECTOR3;
 }
 
 float sensorToInput(int sensor) {
@@ -364,7 +281,7 @@ float lightToInput(int sensorNumber) {
     if(sensorNumber == S_RIGHT)
         index = 1;
 
-    if(currentFixedTimeSteps[index] < fixedTimeSteps && lastValue > 0.9) {
+    if(currentFixedTimeSteps[index] < fixedTimeSteps && lastValue > 0) {
         currentFixedTimeSteps[index]++;
         result = 1;
     } else if(lastValue == 0)
@@ -386,186 +303,6 @@ float lightToInput(int sensorNumber) {
     }
 
     return result;
-}
-
-void regularNeuralNetwork()
-{
-    e_set_led(4,1);
-    e_calibrate_ir();
-    myCalibration();
-    e_set_led(4,0);
-
-    int numberOfInputNeurons = 4+2;
-    int numberOfHiddenNeurons = 10;
-    int numberOfOutputNeurons = 2;
-
-    DefineNetwork(numberOfInputNeurons,numberOfHiddenNeurons,numberOfOutputNeurons);
-
-    SetWeights(weights);
-
-    float* outputs;
-
-    float waitTime = clocksPerSecond/10.0;
-    float diff;
-    time_t start,end;
-    time (&start);
-
-    int leftSpeed = 0;
-    int rightSpeed = 0;
-
-    inputs = malloc(numberOfInputNeurons*sizeof(float));
-    values = malloc(6*sizeof(long));
-
-    outputs = malloc(numberOfOutputNeurons*sizeof(float));
-    outputs[0] = 0;
-    outputs[1] = 0;
-    outputs[2] = 0;
-
-    e_set_speed_left(0);
-    e_set_speed_right(0);
-
-    inputs[0] = 0;
-    inputs[1] = 0;
-    inputs[2] = 0;
-    inputs[3] = 0;
-    inputs[4] = 0;
-    inputs[5] = 0;
-
-    int selector = getSelector();
-    while(selector == getSelector());
-
-    time (&start);
-
-    do {
-        time (&end);
-        diff = difftime(end,start);
-    }while(diff < waitTime*20);
-
-    while(1) {
-
-        resetValues();
-        do {
-            readValues();
-            time (&end);
-            diff = difftime(end,start);
-        }while(diff < waitTime);
-        time (&start);
-        averageValues();
-
-        inputs[0] = sensorToInput(0);
-        inputs[1] = sensorToInput(2);
-        inputs[2] = sensorToInput(5);
-        inputs[3] = sensorToInput(7);
-
-        inputs[4] = lightToInput(5);
-        inputs[5] = lightToInput(2);
-
-        outputs = ComputeOutputs(inputs);
-
-        leftSpeed = (int)(forwardSpeed*(outputs[0]-0.5)*2.0);
-        rightSpeed = (int)(forwardSpeed*(outputs[1]-0.5)*2.0);
-
-        e_set_speed_left(leftSpeed);
-        e_set_speed_right(rightSpeed);
-    }
-}
-
-void neuralNetwork()
-{
-    e_set_led(4,1);
-    e_calibrate_ir();
-    myCalibration();
-    e_set_led(4,0);
-
-    int activeBehavior;
-    float waitTime = clocksPerSecond/10.0;
-    float diff;
-    time_t start,end;
-    int selector;
-    int numberOfInputNeurons = 4+2;
-    int numberOfHiddenNeurons = 10;
-    int numberOfOutputNeurons = 3;
-
-    int i;
-    float timeStep;
-
-    values = malloc(6*sizeof(long));
-    inputs = malloc(numberOfInputNeurons*sizeof(float));
-
-    while(1) {
-
-        e_set_speed_left(0);
-        e_set_speed_right(0);
-
-        inputs[0] = 0;
-        inputs[1] = 0;
-        inputs[2] = 0;
-        inputs[3] = 0;
-        inputs[4] = 0;
-        inputs[5] = 0;
-
-        selector = getSelector();
-        while(selector == getSelector());
-
-        time (&start);
-
-        do {
-            time (&end);
-            diff = difftime(end,start);
-        }while(diff < waitTime*20);
-
-
-        timeStep = 0;
-        DefineNetwork(numberOfInputNeurons,numberOfHiddenNeurons,numberOfOutputNeurons);
-
-        SetWeights(weights);
-
-        float* outputs = malloc(numberOfOutputNeurons*sizeof(float));
-        outputs[0] = 0;
-        outputs[1] = 0;
-        outputs[2] = 0;
-
-        selector = getSelector();
-        time (&start);
-
-        while(1) {
-
-            resetValues();
-            do {
-                readValues();
-                time (&end);
-                diff = difftime(end,start);
-            }while(diff < waitTime);
-            time (&start);
-            averageValues();
-
-            inputs[0] = sensorToInput(S_FRONT_RIGHT);
-            inputs[1] = sensorToInput(S_RIGHT);
-            inputs[2] = sensorToInput(S_LEFT);
-            inputs[3] = sensorToInput(S_FRONT_LEFT);
-
-            inputs[4] = lightToInput(S_LEFT);
-            inputs[5] = lightToInput(S_RIGHT);
-
-            outputs = ComputeOutputs(inputs);
-
-            activeBehavior = 999;
-
-            for(i = 0 ; i < 3 ; i++)
-                if(behaviors[i])
-                    activeBehavior = i;
-
-            int newBehavior;
-            if(activeBehavior != 999)
-                newBehavior = activeBehavior;
-            else
-                newBehavior = findMaxBehavior(outputs,3);
-
-            applyBehavior(newBehavior,inputs);                
-
-            timeStep++;
-        }
-    }
 }
 
 void resetValues() {
@@ -610,7 +347,7 @@ void averageValues() {
     }
 }
 
-void myCalibration() {
+void lightCalibration() {
     leftLightReference = e_get_ambient_light(S_LEFT);
     rightLightReference = e_get_ambient_light(S_RIGHT);
 }
@@ -700,7 +437,7 @@ void turnRight() {
     if(!behaviors[TURN_RIGHT]) {
         startSteps = e_get_steps_left();
         e_set_speed_left(turnSpeed);
-        e_set_speed_right(-turnSpeed);//100
+        e_set_speed_right(-turnSpeed);
         behaviors[TURN_RIGHT] = 1;
     }
 
@@ -709,4 +446,20 @@ void turnRight() {
         e_set_speed_right(0);
         behaviors[TURN_RIGHT] = 0;
     }
+}
+
+void cameraTest() {
+    /* char buffer[160*2];
+
+    e_po3030k_init_cam();
+    e_po3030k_config_cam((ARRAY_WIDTH -160)/2,(ARRAY_HEIGHT-160)/2,
+                     160,160,4,4,RGB_565_MODE);
+    e_po3030k_write_cam_registers();
+
+    e_po3030k_launch_capture(buffer);
+
+    while(1) {
+        while(!e_po3030k_is_img_ready());
+        sendString(buffer);
+    }*/
 }

@@ -32,7 +32,7 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/I2C/e_I2C_master_module.o ${OBJECTDIR}/I2C/e_I2C_protocol.o ${OBJECTDIR}/a_d/advance_ad_scan/e_ad_conv.o ${OBJECTDIR}/a_d/advance_ad_scan/e_prox.o ${OBJECTDIR}/btcom.o ${OBJECTDIR}/camera/fast_2_timer/e_calc.o ${OBJECTDIR}/camera/fast_2_timer/e_registers.o ${OBJECTDIR}/camera/fast_2_timer/e_timers.o ${OBJECTDIR}/ctrhnnmultilayercontroller.o ${OBJECTDIR}/hierarchycalcontroller.o ${OBJECTDIR}/main_c.o ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o ${OBJECTDIR}/motor_led/advance_one_timer/e_led.o ${OBJECTDIR}/motor_led/advance_one_timer/e_motors.o ${OBJECTDIR}/motor_led/e_init_port.o ${OBJECTDIR}/tests.o ${OBJECTDIR}/uart/e_init_uart1.o ${OBJECTDIR}/uart/e_init_uart2.o ${OBJECTDIR}/uart/e_uart1_rx_char.o ${OBJECTDIR}/uart/e_uart1_tx_char.o ${OBJECTDIR}/uart/e_uart2_rx_char.o ${OBJECTDIR}/uart/e_uart2_tx_char.o
+OBJECTFILES=${OBJECTDIR}/I2C/e_I2C_master_module.o ${OBJECTDIR}/I2C/e_I2C_protocol.o ${OBJECTDIR}/a_d/advance_ad_scan/e_ad_conv.o ${OBJECTDIR}/a_d/advance_ad_scan/e_prox.o ${OBJECTDIR}/btcom.o ${OBJECTDIR}/camera/fast_2_timer/e_calc.o ${OBJECTDIR}/camera/fast_2_timer/e_registers.o ${OBJECTDIR}/camera/fast_2_timer/e_timers.o ${OBJECTDIR}/ctrhnnmultilayercontroller.o ${OBJECTDIR}/main_c.o ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o ${OBJECTDIR}/motor_led/advance_one_timer/e_led.o ${OBJECTDIR}/motor_led/advance_one_timer/e_motors.o ${OBJECTDIR}/motor_led/e_init_port.o ${OBJECTDIR}/uart/e_init_uart1.o ${OBJECTDIR}/uart/e_init_uart2.o ${OBJECTDIR}/uart/e_uart1_rx_char.o ${OBJECTDIR}/uart/e_uart1_tx_char.o ${OBJECTDIR}/uart/e_uart2_rx_char.o ${OBJECTDIR}/uart/e_uart2_tx_char.o ${OBJECTDIR}/utilities.o
 
 
 CFLAGS=
@@ -441,26 +441,26 @@ endif
 	@cat ${OBJECTDIR}/camera/fast_2_timer/e_registers.o.err 
 	@if [ -f ${OBJECTDIR}/camera/fast_2_timer/e_registers.o.ok ] ; then rm -f ${OBJECTDIR}/camera/fast_2_timer/e_registers.o.ok; else exit 1; fi
 	
-${OBJECTDIR}/tests.o: tests.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/utilities.o: utilities.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/tests.o.d 
-	@${RM} ${OBJECTDIR}/tests.o.ok ${OBJECTDIR}/tests.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/tests.o.d -o ${OBJECTDIR}/tests.o tests.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/tests.o.d -o ${OBJECTDIR}/tests.o tests.c    2>&1  > ${OBJECTDIR}/tests.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/tests.o.ok ; fi 
+	@${RM} ${OBJECTDIR}/utilities.o.d 
+	@${RM} ${OBJECTDIR}/utilities.o.ok ${OBJECTDIR}/utilities.o.err 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/utilities.o.d -o ${OBJECTDIR}/utilities.o utilities.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/utilities.o.d -o ${OBJECTDIR}/utilities.o utilities.c    2>&1  > ${OBJECTDIR}/utilities.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/utilities.o.ok ; fi 
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
-	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/tests.o.d > ${OBJECTDIR}/tests.o.tmp
-	@${RM} ${OBJECTDIR}/tests.o.d 
-	@${CP} ${OBJECTDIR}/tests.o.tmp ${OBJECTDIR}/tests.o.d 
-	@${RM} ${OBJECTDIR}/tests.o.tmp 
+	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/utilities.o.d > ${OBJECTDIR}/utilities.o.tmp
+	@${RM} ${OBJECTDIR}/utilities.o.d 
+	@${CP} ${OBJECTDIR}/utilities.o.tmp ${OBJECTDIR}/utilities.o.d 
+	@${RM} ${OBJECTDIR}/utilities.o.tmp 
 else 
-	@sed -e 's/\"//g' ${OBJECTDIR}/tests.o.d > ${OBJECTDIR}/tests.o.tmp
-	@${RM} ${OBJECTDIR}/tests.o.d 
-	@${CP} ${OBJECTDIR}/tests.o.tmp ${OBJECTDIR}/tests.o.d 
-	@${RM} ${OBJECTDIR}/tests.o.tmp
+	@sed -e 's/\"//g' ${OBJECTDIR}/utilities.o.d > ${OBJECTDIR}/utilities.o.tmp
+	@${RM} ${OBJECTDIR}/utilities.o.d 
+	@${CP} ${OBJECTDIR}/utilities.o.tmp ${OBJECTDIR}/utilities.o.d 
+	@${RM} ${OBJECTDIR}/utilities.o.tmp
 endif
-	@touch ${OBJECTDIR}/tests.o.err 
-	@cat ${OBJECTDIR}/tests.o.err 
-	@if [ -f ${OBJECTDIR}/tests.o.ok ] ; then rm -f ${OBJECTDIR}/tests.o.ok; else exit 1; fi
+	@touch ${OBJECTDIR}/utilities.o.err 
+	@cat ${OBJECTDIR}/utilities.o.err 
+	@if [ -f ${OBJECTDIR}/utilities.o.ok ] ; then rm -f ${OBJECTDIR}/utilities.o.ok; else exit 1; fi
 	
 ${OBJECTDIR}/motor_led/advance_one_timer/e_led.o: motor_led/advance_one_timer/e_led.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/motor_led/advance_one_timer 
@@ -630,27 +630,6 @@ endif
 	@cat ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o.err 
 	@if [ -f ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o.ok ] ; then rm -f ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o.ok; else exit 1; fi
 	
-${OBJECTDIR}/hierarchycalcontroller.o: hierarchycalcontroller.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.ok ${OBJECTDIR}/hierarchycalcontroller.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/hierarchycalcontroller.o.d -o ${OBJECTDIR}/hierarchycalcontroller.o hierarchycalcontroller.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/hierarchycalcontroller.o.d -o ${OBJECTDIR}/hierarchycalcontroller.o hierarchycalcontroller.c    2>&1  > ${OBJECTDIR}/hierarchycalcontroller.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/hierarchycalcontroller.o.ok ; fi 
-ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
-	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/hierarchycalcontroller.o.d > ${OBJECTDIR}/hierarchycalcontroller.o.tmp
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${CP} ${OBJECTDIR}/hierarchycalcontroller.o.tmp ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.tmp 
-else 
-	@sed -e 's/\"//g' ${OBJECTDIR}/hierarchycalcontroller.o.d > ${OBJECTDIR}/hierarchycalcontroller.o.tmp
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${CP} ${OBJECTDIR}/hierarchycalcontroller.o.tmp ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.tmp
-endif
-	@touch ${OBJECTDIR}/hierarchycalcontroller.o.err 
-	@cat ${OBJECTDIR}/hierarchycalcontroller.o.err 
-	@if [ -f ${OBJECTDIR}/hierarchycalcontroller.o.ok ] ; then rm -f ${OBJECTDIR}/hierarchycalcontroller.o.ok; else exit 1; fi
-	
 ${OBJECTDIR}/camera/fast_2_timer/e_timers.o: camera/fast_2_timer/e_timers.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/camera/fast_2_timer 
 	@${RM} ${OBJECTDIR}/camera/fast_2_timer/e_timers.o.d 
@@ -778,26 +757,26 @@ endif
 	@cat ${OBJECTDIR}/camera/fast_2_timer/e_registers.o.err 
 	@if [ -f ${OBJECTDIR}/camera/fast_2_timer/e_registers.o.ok ] ; then rm -f ${OBJECTDIR}/camera/fast_2_timer/e_registers.o.ok; else exit 1; fi
 	
-${OBJECTDIR}/tests.o: tests.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/utilities.o: utilities.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/tests.o.d 
-	@${RM} ${OBJECTDIR}/tests.o.ok ${OBJECTDIR}/tests.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/tests.o.d -o ${OBJECTDIR}/tests.o tests.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/tests.o.d -o ${OBJECTDIR}/tests.o tests.c    2>&1  > ${OBJECTDIR}/tests.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/tests.o.ok ; fi 
+	@${RM} ${OBJECTDIR}/utilities.o.d 
+	@${RM} ${OBJECTDIR}/utilities.o.ok ${OBJECTDIR}/utilities.o.err 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/utilities.o.d -o ${OBJECTDIR}/utilities.o utilities.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/utilities.o.d -o ${OBJECTDIR}/utilities.o utilities.c    2>&1  > ${OBJECTDIR}/utilities.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/utilities.o.ok ; fi 
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
-	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/tests.o.d > ${OBJECTDIR}/tests.o.tmp
-	@${RM} ${OBJECTDIR}/tests.o.d 
-	@${CP} ${OBJECTDIR}/tests.o.tmp ${OBJECTDIR}/tests.o.d 
-	@${RM} ${OBJECTDIR}/tests.o.tmp 
+	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/utilities.o.d > ${OBJECTDIR}/utilities.o.tmp
+	@${RM} ${OBJECTDIR}/utilities.o.d 
+	@${CP} ${OBJECTDIR}/utilities.o.tmp ${OBJECTDIR}/utilities.o.d 
+	@${RM} ${OBJECTDIR}/utilities.o.tmp 
 else 
-	@sed -e 's/\"//g' ${OBJECTDIR}/tests.o.d > ${OBJECTDIR}/tests.o.tmp
-	@${RM} ${OBJECTDIR}/tests.o.d 
-	@${CP} ${OBJECTDIR}/tests.o.tmp ${OBJECTDIR}/tests.o.d 
-	@${RM} ${OBJECTDIR}/tests.o.tmp
+	@sed -e 's/\"//g' ${OBJECTDIR}/utilities.o.d > ${OBJECTDIR}/utilities.o.tmp
+	@${RM} ${OBJECTDIR}/utilities.o.d 
+	@${CP} ${OBJECTDIR}/utilities.o.tmp ${OBJECTDIR}/utilities.o.d 
+	@${RM} ${OBJECTDIR}/utilities.o.tmp
 endif
-	@touch ${OBJECTDIR}/tests.o.err 
-	@cat ${OBJECTDIR}/tests.o.err 
-	@if [ -f ${OBJECTDIR}/tests.o.ok ] ; then rm -f ${OBJECTDIR}/tests.o.ok; else exit 1; fi
+	@touch ${OBJECTDIR}/utilities.o.err 
+	@cat ${OBJECTDIR}/utilities.o.err 
+	@if [ -f ${OBJECTDIR}/utilities.o.ok ] ; then rm -f ${OBJECTDIR}/utilities.o.ok; else exit 1; fi
 	
 ${OBJECTDIR}/motor_led/advance_one_timer/e_led.o: motor_led/advance_one_timer/e_led.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/motor_led/advance_one_timer 
@@ -966,27 +945,6 @@ endif
 	@touch ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o.err 
 	@cat ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o.err 
 	@if [ -f ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o.ok ] ; then rm -f ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o.ok; else exit 1; fi
-	
-${OBJECTDIR}/hierarchycalcontroller.o: hierarchycalcontroller.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.ok ${OBJECTDIR}/hierarchycalcontroller.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/hierarchycalcontroller.o.d -o ${OBJECTDIR}/hierarchycalcontroller.o hierarchycalcontroller.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/hierarchycalcontroller.o.d -o ${OBJECTDIR}/hierarchycalcontroller.o hierarchycalcontroller.c    2>&1  > ${OBJECTDIR}/hierarchycalcontroller.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/hierarchycalcontroller.o.ok ; fi 
-ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
-	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/hierarchycalcontroller.o.d > ${OBJECTDIR}/hierarchycalcontroller.o.tmp
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${CP} ${OBJECTDIR}/hierarchycalcontroller.o.tmp ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.tmp 
-else 
-	@sed -e 's/\"//g' ${OBJECTDIR}/hierarchycalcontroller.o.d > ${OBJECTDIR}/hierarchycalcontroller.o.tmp
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${CP} ${OBJECTDIR}/hierarchycalcontroller.o.tmp ${OBJECTDIR}/hierarchycalcontroller.o.d 
-	@${RM} ${OBJECTDIR}/hierarchycalcontroller.o.tmp
-endif
-	@touch ${OBJECTDIR}/hierarchycalcontroller.o.err 
-	@cat ${OBJECTDIR}/hierarchycalcontroller.o.err 
-	@if [ -f ${OBJECTDIR}/hierarchycalcontroller.o.ok ] ; then rm -f ${OBJECTDIR}/hierarchycalcontroller.o.ok; else exit 1; fi
 	
 ${OBJECTDIR}/camera/fast_2_timer/e_timers.o: camera/fast_2_timer/e_timers.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/camera/fast_2_timer 

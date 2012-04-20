@@ -17,9 +17,8 @@
       <itemPath>camera/fast_2_timer/e_po3030k.h</itemPath>
       <itemPath>a_d/advance_ad_scan/e_prox.h</itemPath>
       <itemPath>uart/e_uart_char.h</itemPath>
-      <itemPath>hierarchycalcontroller.h</itemPath>
       <itemPath>main_c.h</itemPath>
-      <itemPath>tests.h</itemPath>
+      <itemPath>utilities.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LibraryFiles"
                    displayName="Library Files"
@@ -55,9 +54,8 @@
       <itemPath>uart/e_uart1_tx_char.s</itemPath>
       <itemPath>uart/e_uart2_rx_char.s</itemPath>
       <itemPath>uart/e_uart2_tx_char.s</itemPath>
-      <itemPath>hierarchycalcontroller.c</itemPath>
       <itemPath>main_c.c</itemPath>
-      <itemPath>tests.c</itemPath>
+      <itemPath>utilities.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -103,18 +101,18 @@
         <property key="enable-handles" value="true"/>
         <property key="enable-data-init" value="true"/>
         <property key="secure-flash" value="no_flash"/>
-        <property key="boot-write-protect" value="no_write_protect"/>
-        <property key="boot-flash" value="no_flash"/>
-        <property key="report-memory-usage" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="boot-flash" value="no_flash"/>
+        <property key="boot-write-protect" value="no_write_protect"/>
         <property key="input-libraries" value=""/>
         <property key="secure-ram" value="no_ram"/>
         <property key="enable-check-sections" value="false"/>
         <property key="enable-default-isr" value="true"/>
         <property key="symbol-stripping" value="keep-all"/>
         <property key="boot-ram" value="no_ram"/>
-        <property key="secure-eeprom" value="no_eeprom"/>
         <property key="extra-lib-directories" value=""/>
+        <property key="secure-eeprom" value="no_eeprom"/>
       </C30-LD>
       <C30Global>
       </C30Global>
