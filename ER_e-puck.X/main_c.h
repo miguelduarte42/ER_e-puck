@@ -34,3 +34,7 @@ void turnLeft();
 void turnRight();
 
 void cameraTest();
+
+void hierarquicalAnnCycle(void);
+
+void regularAnnCycle(void);

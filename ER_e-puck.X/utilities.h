@@ -1,3 +1,9 @@
+char waitForMessage(char msg);
+
+unsigned short receiveMessage();
+
+unsigned char receiveSingleChar();
+
 int getSelector();
 
 void sendString(char* s);
