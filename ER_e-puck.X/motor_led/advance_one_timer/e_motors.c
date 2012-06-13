@@ -57,7 +57,7 @@ EPFL Ecole polytechnique federale de Lausanne http://www.epfl.ch
  *
  * Powersave will only be enabled for speed < MAXV
  */
-#define POWERSAVE
+//#define POWERSAVE
 #define TRESHV 650
 #define MAXV 601
 
