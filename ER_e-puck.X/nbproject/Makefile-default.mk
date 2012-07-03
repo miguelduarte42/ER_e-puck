@@ -32,7 +32,7 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/I2C/e_I2C_master_module.o ${OBJECTDIR}/I2C/e_I2C_protocol.o ${OBJECTDIR}/a_d/advance_ad_scan/e_ad_conv.o ${OBJECTDIR}/a_d/advance_ad_scan/e_prox.o ${OBJECTDIR}/btcom.o ${OBJECTDIR}/camera/fast_2_timer/e_calc.o ${OBJECTDIR}/camera/fast_2_timer/e_registers.o ${OBJECTDIR}/camera/fast_2_timer/e_timers.o ${OBJECTDIR}/ctrhnnmultilayercontroller.o ${OBJECTDIR}/main_c.o ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o ${OBJECTDIR}/motor_led/advance_one_timer/e_led.o ${OBJECTDIR}/motor_led/advance_one_timer/e_motors.o ${OBJECTDIR}/motor_led/e_init_port.o ${OBJECTDIR}/uart/e_init_uart1.o ${OBJECTDIR}/uart/e_init_uart2.o ${OBJECTDIR}/uart/e_uart1_rx_char.o ${OBJECTDIR}/uart/e_uart1_tx_char.o ${OBJECTDIR}/uart/e_uart2_rx_char.o ${OBJECTDIR}/uart/e_uart2_tx_char.o ${OBJECTDIR}/utilities.o
+OBJECTFILES=${OBJECTDIR}/I2C/e_I2C_master_module.o ${OBJECTDIR}/I2C/e_I2C_protocol.o ${OBJECTDIR}/a_d/advance_ad_scan/e_ad_conv.o ${OBJECTDIR}/a_d/advance_ad_scan/e_prox.o ${OBJECTDIR}/btcom.o ${OBJECTDIR}/camera/fast_2_timer/e_calc.o ${OBJECTDIR}/camera/fast_2_timer/e_registers.o ${OBJECTDIR}/camera/fast_2_timer/e_timers.o ${OBJECTDIR}/ctrhnnmultilayercontroller.o ${OBJECTDIR}/e_randb.o ${OBJECTDIR}/main_c.o ${OBJECTDIR}/motor_led/advance_one_timer/e_agenda.o ${OBJECTDIR}/motor_led/advance_one_timer/e_led.o ${OBJECTDIR}/motor_led/advance_one_timer/e_motors.o ${OBJECTDIR}/motor_led/e_init_port.o ${OBJECTDIR}/uart/e_init_uart1.o ${OBJECTDIR}/uart/e_init_uart2.o ${OBJECTDIR}/uart/e_uart1_rx_char.o ${OBJECTDIR}/uart/e_uart1_tx_char.o ${OBJECTDIR}/uart/e_uart2_rx_char.o ${OBJECTDIR}/uart/e_uart2_tx_char.o ${OBJECTDIR}/utilities.o
 
 
 CFLAGS=
@@ -357,6 +357,27 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/e_randb.o: e_randb.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/e_randb.o.d 
+	@${RM} ${OBJECTDIR}/e_randb.o.ok ${OBJECTDIR}/e_randb.o.err 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/e_randb.o.d -o ${OBJECTDIR}/e_randb.o e_randb.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/e_randb.o.d -o ${OBJECTDIR}/e_randb.o e_randb.c    2>&1  > ${OBJECTDIR}/e_randb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/e_randb.o.ok ; fi 
+ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
+	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/e_randb.o.d > ${OBJECTDIR}/e_randb.o.tmp
+	@${RM} ${OBJECTDIR}/e_randb.o.d 
+	@${CP} ${OBJECTDIR}/e_randb.o.tmp ${OBJECTDIR}/e_randb.o.d 
+	@${RM} ${OBJECTDIR}/e_randb.o.tmp 
+else 
+	@sed -e 's/\"//g' ${OBJECTDIR}/e_randb.o.d > ${OBJECTDIR}/e_randb.o.tmp
+	@${RM} ${OBJECTDIR}/e_randb.o.d 
+	@${CP} ${OBJECTDIR}/e_randb.o.tmp ${OBJECTDIR}/e_randb.o.d 
+	@${RM} ${OBJECTDIR}/e_randb.o.tmp
+endif
+	@touch ${OBJECTDIR}/e_randb.o.err 
+	@cat ${OBJECTDIR}/e_randb.o.err 
+	@if [ -f ${OBJECTDIR}/e_randb.o.ok ] ; then rm -f ${OBJECTDIR}/e_randb.o.ok; else exit 1; fi
+	
 ${OBJECTDIR}/main_c.o: main_c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/main_c.o.d 
@@ -673,6 +694,27 @@ endif
 	@if [ -f ${OBJECTDIR}/motor_led/e_init_port.o.ok ] ; then rm -f ${OBJECTDIR}/motor_led/e_init_port.o.ok; else exit 1; fi
 	
 else
+${OBJECTDIR}/e_randb.o: e_randb.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/e_randb.o.d 
+	@${RM} ${OBJECTDIR}/e_randb.o.ok ${OBJECTDIR}/e_randb.o.err 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/e_randb.o.d -o ${OBJECTDIR}/e_randb.o e_randb.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF ${OBJECTDIR}/e_randb.o.d -o ${OBJECTDIR}/e_randb.o e_randb.c    2>&1  > ${OBJECTDIR}/e_randb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/e_randb.o.ok ; fi 
+ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
+	@sed -e 's/\"//g' -e 's/\\$$/__EOL__/g' -e 's/\\ /__ESCAPED_SPACES__/g' -e 's/\\/\//g' -e 's/__ESCAPED_SPACES__/\\ /g' -e 's/__EOL__$$/\\/g' ${OBJECTDIR}/e_randb.o.d > ${OBJECTDIR}/e_randb.o.tmp
+	@${RM} ${OBJECTDIR}/e_randb.o.d 
+	@${CP} ${OBJECTDIR}/e_randb.o.tmp ${OBJECTDIR}/e_randb.o.d 
+	@${RM} ${OBJECTDIR}/e_randb.o.tmp 
+else 
+	@sed -e 's/\"//g' ${OBJECTDIR}/e_randb.o.d > ${OBJECTDIR}/e_randb.o.tmp
+	@${RM} ${OBJECTDIR}/e_randb.o.d 
+	@${CP} ${OBJECTDIR}/e_randb.o.tmp ${OBJECTDIR}/e_randb.o.d 
+	@${RM} ${OBJECTDIR}/e_randb.o.tmp
+endif
+	@touch ${OBJECTDIR}/e_randb.o.err 
+	@cat ${OBJECTDIR}/e_randb.o.err 
+	@if [ -f ${OBJECTDIR}/e_randb.o.ok ] ; then rm -f ${OBJECTDIR}/e_randb.o.ok; else exit 1; fi
+	
 ${OBJECTDIR}/main_c.o: main_c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/main_c.o.d 

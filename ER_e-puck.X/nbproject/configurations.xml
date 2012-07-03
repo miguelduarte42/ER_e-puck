@@ -16,6 +16,7 @@
       <itemPath>motor_led/advance_one_timer/e_motors.h</itemPath>
       <itemPath>camera/fast_2_timer/e_po3030k.h</itemPath>
       <itemPath>a_d/advance_ad_scan/e_prox.h</itemPath>
+      <itemPath>e_randb.h</itemPath>
       <itemPath>uart/e_uart_char.h</itemPath>
       <itemPath>main_c.h</itemPath>
       <itemPath>utilities.h</itemPath>
@@ -48,6 +49,7 @@
       <itemPath>motor_led/advance_one_timer/e_led.c</itemPath>
       <itemPath>motor_led/advance_one_timer/e_motors.c</itemPath>
       <itemPath>a_d/advance_ad_scan/e_prox.c</itemPath>
+      <itemPath>e_randb.c</itemPath>
       <itemPath>camera/fast_2_timer/e_registers.c</itemPath>
       <itemPath>camera/fast_2_timer/e_timers.c</itemPath>
       <itemPath>uart/e_uart1_rx_char.s</itemPath>
@@ -101,23 +103,23 @@
         <property key="enable-handles" value="true"/>
         <property key="enable-data-init" value="true"/>
         <property key="secure-flash" value="no_flash"/>
-        <property key="generate-cross-reference-file" value="false"/>
-        <property key="report-memory-usage" value="false"/>
-        <property key="boot-flash" value="no_flash"/>
         <property key="boot-write-protect" value="no_write_protect"/>
+        <property key="boot-flash" value="no_flash"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
         <property key="input-libraries" value=""/>
         <property key="secure-ram" value="no_ram"/>
         <property key="enable-check-sections" value="false"/>
         <property key="enable-default-isr" value="true"/>
         <property key="symbol-stripping" value="keep-all"/>
         <property key="boot-ram" value="no_ram"/>
-        <property key="extra-lib-directories" value=""/>
         <property key="secure-eeprom" value="no_eeprom"/>
+        <property key="extra-lib-directories" value=""/>
       </C30-LD>
       <C30Global>
       </C30Global>
-      <ICD3PlatformTool>
-      </ICD3PlatformTool>
+      <ICD2PlatformTool>
+      </ICD2PlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>
