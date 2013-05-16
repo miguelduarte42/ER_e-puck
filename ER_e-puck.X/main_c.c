@@ -24,7 +24,7 @@
 #include <stdlib.h>
 
 //ANN weighs
-float ann[] = {1.0186857373517237,-7.475683599040901,-0.4405801663602631,-1.3383211673648836,0.36605074753342737,-1.4725349270331487,-3.1964130950325242,-6.442202232349752,-1.3470574837616127,-6.350548820261115,-1.8085622919149955,0.8439916962152452,1.0872771166000255,-2.625628212579953,-0.9023856106832596,-6.352699062113713,0.8225958361416228,-9.551495700294396,-3.037982492893332,-0.3015422918023814,0.15803511657796643,2.3855950779177926,-9.132388611819124,0.1920570155060468,-5.534369428343568,8.229571194740185,-2.6483392989073673,-9.268471026743297,-0.2934444822919336,1.2142066749695877,-7.5744190961145135,-6.934692524328595,-0.3151964746202238,-6.106833986331924,2.5317228989262146,3.1809511459788795,-7.844566541602759,2.603017437308979,3.9300965238961645,2.108271972584107,-2.1035697183644126,-4.857807416927509,-3.1715096288198543,1.4584762888130542,-2.5374012509042343,-4.689616713063325,3.7724426946901644,-7.249634891494593,-5.624414778370726,-10.0,-3.390022432117288,3.8542347899922142,-4.5793759610852485,-3.064035867549898,-1.7508826476147181,6.521152772264868,4.185895327998204,-2.723871619073064,0.3998504723007248,-1.9383610345020155,-7.061201469216554,2.2052463348438365,-4.23926316939738,-2.845006179555863,-2.0878626136082774,-4.044446028435798,-3.239021458094553,-1.3094402998113681,5.3216595760609415,1.4772707982198223,-2.0667201128341603,0.8201621571315405,-2.7314696064903874,-8.321425678549634,1.3326071643201265,-3.5601397385653,-1.5614087209275131,0.47146897260344306,-6.09326373927271,-0.7641814512147735,-0.8097037328664487,-6.362562051897353,0.5749761678927819,-0.9173963974170033,-4.383132131094809,2.770315846761898,-1.0830365045764998,-4.08468297950306,-0.4720145625674774,-2.7772288583190625,-6.077867423329266,-3.3806217257601183,3.587297920368622,-7.630300433581471,5.4116034676104094,0.06335984623673131,0.15970028391460755,-10.0,-4.984290757171224,-0.37138728125026355,0.5917392400397785,-0.029874519113911147,-1.7314513215415486,-2.0444408523835196,-6.828375558932857,-9.680932993050584,2.057449585436978,0.2902745997579167,-0.5893516132336778,-0.9502955548077974,7.568248020021569,-0.5534358806449735,3.1473355184521723,-4.689113695978695,-6.182789836562501,5.6824034401575885,3.4366914089512703,4.483511444392193,-5.305925775932317,4.184903398077745,1.691616722712368,1.5033500993599447,2.1470468657677033,-0.4564471539863838,-2.272384453818826,-8.01933960023024,-2.391247137015722,-0.02374105253348524,3.927050086859371,0.32583415568415575,3.759649183955654,-0.595789557969494,0.060403496086896824,-0.9099095574613901,-2.8842791259896594,5.911838068118133,0.4579455789317703,1.4989296128810605,-7.161200229465171,-0.2468962281239856,0.8302501979232912,-0.29686855708761173,0.9332173910914583,-1.207399997841522,-7.654212924702881,-4.8921649738789075,-2.079644722127696,3.751878789238153,-6.130517707500769,-2.375747502618644,1.9604966087074727,-1.8533480172389165,-7.064426135734538,-7.385048385189214,-1.9827106224114641,0.3262204905082349,-8.916219685413026,5.754107736406751,-0.8116607039273996,-3.3167022795135868,-6.361751893872746,-9.614016645237374,1.7812522358786023,-5.438142701971375,-5.03278644371958,-1.4585995180496716,8.05532043895285,-0.6370611202520291,-0.6177345908156732,-3.1084411920883,4.631680743186439,1.716464569864367,-3.2770844068826004,-5.578154781960215,4.2919949120990575,3.9025727888577366,0.6455241776560168,-3.769902847995919,-2.4648269417264617,-1.6959897795653263,-3.559135259879885,-8.001864402948584,-3.9786254703436335,-1.767930391690974,3.6470238399515913,-4.329238820591519,0.17603579419943396,-2.3977692638970853,-0.6166911166631428,10.0,-5.91192786730997,2.6565407048504692,-1.6338586300879028};
+float ann[] = {-0.06021132793849504,-0.14911514449288843,-2.822166145442657,9.526767011047108,-4.591949705560446,2.3247390783400865,-5.827771453101747,-6.553716536562396,3.808565156492382,0.024518842142601083,-7.069013573881338,-9.694472108616297,1.9953045590003988,1.0824786751160864,-1.8153003871835562,4.494614479658232,-4.95898657867666,-3.632344209372487,-2.092069290398271,4.726626355741221,0.25657113167247214,0.9628714782534633,-1.0207571074240065,-1.5578835881929762,2.5289849189772555,-7.096551333001298,-2.6664669335123996,1.6081001926609573,3.466996242289394,7.477431293905786,-5.612457165084548,-0.09503622981920257,0.8045543791352823,-1.347975781244698,-2.255267776123499,-0.42405513541392253,4.552971718134646,0.23879634177667008,-4.422131436778603,4.053844844941706,2.285361343112442,0.7184351009910308,8.875327688884216E-4,0.7666226425071341,2.99156642293625,-10.0,3.6208494513546285,-2.4650220549570347,0.23386361252537424,0.9988279843228911,-0.6077850136486325,-0.8225487184274883,6.944108064931556,-2.238595988153843,-7.379703881965168,0.8616236074752985,1.3836842323429521,-8.997549919583761,-0.9774895467045642,0.15595589268333865,1.4231393500002647,2.401569329725694,2.1647832638251288,-6.801863768694237,-1.5029501890087102,-2.635197751597112,-3.1027699287016675,6.334997570423093,6.141081810782875,-1.0985067827211614,0.9226024576612017,2.514059729543014,-0.16881864406660985,-2.444346337813917,-1.632476147432982,-0.4435468647494398,-3.4758873494104474,-7.047289942308272,3.645704322261033,-3.7784676714722005,-2.3598173669251463,0.050032891085421916,0.6065953689337724,3.022457476381047,5.502117491503103,-2.046016554332,1.970552029969749,5.366653241042987,-3.4951338079602805,2.975400241349778,-2.009012300123029,3.9130052760911567,2.958400347381006,-2.6241454972949203,-2.109601924744304,1.6843935588261059,2.8506677051628673,-2.7297974986450395,-1.66551508741958,-7.521307087735304,-4.1375327735855425,1.2769633892227712,-4.229951089507445,-4.845342724965588,0.7981498019569926,-3.533786140722191,4.925738819577332,-3.675434853774087,-3.0450462529168765,-3.3605373319706175,-0.44802771423336024,6.124409593537153,5.758248404041916,6.296968833392105,-2.0089466701334224,-1.7431259876377978,-1.0229465325756228,6.502076391859896,-4.957558633334982,-2.7033036583643106,1.6030392538396017,4.037005021991002,-0.8312036368011567,-4.979364401479448,3.7090266280949287,2.764765861604539,0.25273688359864765,-0.14243455604087862,-0.9965586207488779,0.5642422131198717,2.362745726147997,-0.0622319043510593,2.8805457750332706,1.2314065445263345,-7.207847744984386,-5.090264379381912,0.5786325188950148,-1.769849837705575,-0.39439890908339037,3.2884928771224047,-4.330923610260073,2.4950073882063313,-4.78048995754318,2.9885565000944583,-3.254342394428328,-1.7078332561725897,1.605999873961888,2.692254503529327,-0.2778202965230332,-2.4775237823718483,3.5487186184488317,-3.0481835963857007,1.7016014744523058,-3.4092414657763106,1.3995981370169004,1.731489507641144,2.8567789455085024,-5.957659238980295,-2.325805681000732,-4.289331008739973,0.6039977947203197,0.024433925996459244,-3.0766740734822142,-3.227120616170864,-2.1180815878769863,2.2910109396347744,3.7922643116126302,-0.35711477733044605,0.5278342054457806,-0.12232142544921842,2.0059765176667086,5.63188038839784,-3.995389300168748,0.7846776513152867,-2.127432044982534,6.201216683894405,3.9665571843141625,-3.9465464557727348,2.777885823346731,-4.8707091155422635,-1.961078405039823,-0.9522530562866448,-0.9670067676175126,0.9327685027880214,5.8503960147100935,-0.9164482758269017,3.9872692198748245,1.466853780103132,2.3663125173271387,5.582542120849785,1.1867611014102106,2.282469001918452,-1.434050585181991,-1.0211036929594204,2.331425608266823,1.0365184400434049,-1.3612516111865047,-1.7082005605900692,-1.884335558768329,4.361016156542867,1.1024598471138936,3.241507885523464,1.836279211068291,3.7058408726492975,-4.860502122421761,-6.816836994967846,4.565479351784922,-3.6683062148078798,0.7450576625901679,-4.7224955822216765,0.3875090992678607,3.0100313474855436,2.987107915537787};//{-4.892571396806224,-2.6172320345256903,3.9300575812298293,-2.021969801980863,5.25798975533254,2.5505970445978985,-5.263115231364518,0.7713200598806977,-0.4762149478310928,-6.814588757661554,4.179739083583238,-5.643233995956258,-5.357385997688704,3.8561397766809353,1.5892222810153964,1.785625386577258,-4.764871824659019,0.9880085631538453,-3.8710196080695627,-3.891245585739194,1.1867751689774138,-3.5024555321508157,-0.11525422962518395,-0.032687178786589235,-4.7794466620423215,-3.2971663251349836,0.25414513123101856,-4.4670920496422495,3.926484090130841,1.2521807592800716,-4.255107740128854,-0.4377404181847975,4.267821874753887,-5.784152965284471,3.97505170412003,-6.2444609147304355,1.3893582132476134,-0.9966059168406435,0.9813380955195887,-10.0,-1.826241979823388,-2.0292607576022528,0.9145221536470398,1.2524388841478857,-3.3780756811391126,0.6142734486929716,-7.065960089871275,-8.987514438623581,-3.314987348125952,-0.7155762415705308,-1.7870256002546046,-6.711173383730195,-2.9663679286259934,2.2876188793938526,-3.563871099606654,-2.701809143727588,-4.994647321251022,-4.696135488249396,-1.5243414260504131,-1.886580943400208,-4.554267714525289,3.752823614371245,3.0157758041906764,2.6845501880889766,8.477664036139785,5.023331486771354,-0.46303093544302065,-4.240529174799205,-3.050667918871712,0.6513323690516067,-0.07644688158134312,-1.3033704813361782,1.8237760839745694,-0.9754750657087984,-7.530473857090967,-2.3805094392091233,-0.1098753393843861,-4.2770487568334525,-5.922290035833086,1.7930231710392586,4.990382951013529,-1.5953337260010196,0.13425314175074288,-1.3058643827514524,-3.015352602264408,1.135347110056585,-4.623194057558824,1.4488815136198945,0.7145097324761145,-1.6304550950528578,3.837680544512474,-2.61128715955164,-1.2178776014348118,3.0673260287472317,-1.1069192378056243,3.3589320833039125,-2.441665571147624,1.996756154354367,-1.693691257825816,-4.106506533288527,-1.74216880917131,2.743388408182944,-4.265646051251441,3.2473878684600552,-1.910628355452632,-1.925196097236306,-0.24082239570747171,-2.8118523781406726,-0.14644521799709664,-3.0419931529284625,1.8339515181240347,0.7305828371242019,-2.239510845301691,-2.8710178408101106,-5.154224715487683,3.6317698626442616,5.821683395260096,-5.224201467289985,-5.003908688027581,-3.742871601563149,-1.0041766342759342,-0.8664333945155396,6.937260450614118,-2.334015527850952,-4.669250797334951,2.149144505617474,-1.9235806093568135,1.361015255901729,0.36449007767943264,1.6426824003146339,0.6651914801578572,0.8366304417751741,0.2589081481186837,3.6054969551136575,1.2046157098117374,1.3366522406611148,-8.200057031553396,0.06815285486592604,-0.4205685372034248,-2.1657767538116506,-3.238497216208489,-1.1608614079676771,-2.242209154639288,-2.708184068995775,-2.4703063910503937,-3.8821966387617763,-2.664939415124282,-2.4400627254815843,3.1143066814592792,2.29303034791266,2.443016097407217,1.302977295029824,1.9171731876036424,0.6111801313710796,-3.4812868503002528,-3.9714948170753814,-0.7199204739519811,-7.007114682698424,-4.191297000423149,-5.0533886919563695,-3.088718339454356,-3.367080578337837,1.3445654007835015,2.522560128841258,0.4164327731116888,-4.50598018778113,2.7580656557884518,-10.0,0.7009539288971658,-0.3332326079196282,-7.614388175057757,-1.7948014549252536,5.3568559530262005,0.09437827012145739,-4.691400865621626,-3.248494889651189,6.037019789649941,-4.884479676949442,-0.25299082796877287,4.3139650022081195,0.2783904046383248,-1.2201101063923936};
 //float corridor[] = {1.3931838764842643,-0.662158666813073,-0.22055808482353467,-1.700309900372547,4.344124441923328,1.774700447827112,-3.124672431778498,-4.163406143909192,-5.04391721454275,1.180506399367846,-1.628215721803486,-7.085079020900242,-1.9259920244261264,0.7150466597208923,1.5673982919150689,3.4139319319518644,1.916857437914972,-2.4612825185605978,-3.5773908500586726,1.8102262948929364,-1.737470612855581,-5.835175168810551,-0.7690538897973358,2.4185237236260226,0.3613629442155276,-7.499579956048632,-7.868520858241885,1.5366341369291765,-7.054307713182831,3.438058023854003,-2.0479371562655113,6.227829333532279,5.52561171299704,4.083390243581929,0.8854571714904695};
 //float left[] = {-2.5208230611619475,1.7423071725264745,-0.4578519866873094,7.671178246654585,1.6038481639669129,2.300409369193382,-0.7211349237390821,-5.152462330382561,4.421619751922505,-1.4978353184114936,-2.967396648229604,5.631858632191838,-3.063698772420594,-3.973552833598986,0.1644079220070817,-1.467398305083888,-1.860975980866346,0.1647515637769515,1.0778673219304693,-0.3058579820968611,-4.856276889016559,0.6426719881994518,0.2102833957117533,0.10817207157788979,-3.3541497146366726,-0.5704548434538509,0.2034629114938285,2.8090822644015043,-2.4088774808721265,-5.12452519350807,-1.10220252709525,2.622858197363396,-2.4251307821132357,1.5648754436893701,0.9601105571627659};
 //float right[] = {-2.418097113842574,-3.5327347339525,-0.053595038902610914,-0.3219014741212832,-2.712600911691071,-3.674152786444435,-3.816762196089511,1.6957522705846952,-4.362566275897446,-5.271109651033521,0.8039192682592368,8.343706730082465,0.513679630474204,-1.3047178836944897,4.558885952013647,-1.0572316551790883,0.48921518546850207,-8.445137822011134,-4.283513585715793,-1.2973297632132899,2.2396199027822297,-2.203450664703018,-0.8794902114829515,0.37175954927925,0.9899890779151184,1.4450220826707958,-9.571404065982724,-0.5739501304552994,-7.109848723802777,10.0,1.8288754440138513,-4.479666846656912,-4.904083067322738,0.8239009742048082,3.467480546446145};
@@ -37,9 +37,9 @@ int targetSteps = 333 - 10; //this is around 90 degrees
 int behaviors[] = {0,0,0};
 
 //Preprogrammed behaviors
-int TURN_LEFT = 0;
-int TURN_RIGHT = 1;
-int FORWARD = 2;
+int FORWARD = 0;
+int TURN_LEFT = 1;
+int TURN_RIGHT = 2;
 
 float inputs[6];
 
@@ -65,7 +65,11 @@ int fixedTimeSteps = 15;
 float leftLightReference = 0;
 float rightLightReference = 0;
 
-float lightThreshold = 15;
+long lightValues[2][3];
+long leftLightIndex = 0;
+long rightLightIndex = 0;
+
+float lightThreshold = 10;
 
 float lastLight2 = 0,lastLight5 = 0;
 float* outputs;
@@ -127,194 +131,118 @@ int main() {
 
     if(selector != 0) {
 
-        if(selector == 1){
+        if(selector == 1) {
+            
+            e_calibrate_ir();
+            lightCalibration();
+
+            while(getSelector() == 1);
+            
+            e_activate_agenda(readValues, 10);
+            e_activate_agenda(updateFlag, 100);
+            
+            e_start_agendas_processing();
+
+            while(1) {
+
+                int i = 0;
+
+                e_set_speed_left(170);
+                e_set_speed_right(-170);
+                
+                flag = 0;
+                while(1) {
+                    while(!flag);
+                    flag = 0;
+                    sendInputs();
+                }
+            }
+
+        } else if(selector == 2) {
+
+            e_start_agendas_processing();
+            int leftSpeed = 650;
+            int rightSpeed = 650;
+            e_set_speed_left(leftSpeed);
+            e_set_speed_right(rightSpeed);
+            while(1);
+
+        } else if(selector == 1){
             setupRBB();
             irreceiver = 1;
             dummyANN();
         } else if(selector == 2) {
             setupRBB();
             goBack();
-        } else if(selector < 5){
+        } else if(selector <= 6){
             dummyANN();
-        }else
+        }else if(selector == 7) {
+            lightTest();
+        } else
             neuralNetwork();
     }
 
 }
 
-void goBack() {
-
-    e_set_led(4,1);
+void lightTest() {
     e_calibrate_ir();
     lightCalibration();
-    e_set_led(4,0);
 
-   int selector;
+    e_set_led(4,1);
 
     while(1) {
 
-        inputs[0] = 0;
-        inputs[1] = 0;
-        inputs[2] = 0;
-        inputs[3] = 0;
-        inputs[4] = 0;
-        inputs[5] = 0;
+        int selector = getSelector();
 
-        timeStep = 0;
-        
-        selector = getSelector();
         while(selector == getSelector());
 
-        resetValues();
+        e_set_led(4,0);
 
-        e_activate_agenda(IRSender, 500);
-
-        e_activate_agenda(updateFlag, 1000);
+        e_activate_agenda(updateFlag, 500);//1000
         e_activate_agenda(readValues, 10);
         e_start_agendas_processing();
 
-        int steps = 0;
+        e_set_speed_left(680);
+        e_set_speed_right(680);
 
-        int count0 = 0;
-        stopped = 1;
-        int countTeammate = 0;
+        finished = 0;
 
-        while(1) {
-            while(!flag);
-            flag = 0;
+        int i = 0;
 
-            averageValues();
-
-            inputs[0] = sensorToInput(S_FRONT_RIGHT);
-            inputs[1] = sensorToInput(S_RIGHT);
-            inputs[2] = sensorToInput(S_LEFT);
-            inputs[3] = sensorToInput(S_FRONT_LEFT);
-
-            resetValues();
-
+        while(!finished) {
             if(!stopped) {
+                while(!flag);
+                flag = 0;
+                averageValues();
 
-                if(steps > 50 && !behaviors[TURN_LEFT] && !behaviors[TURN_RIGHT]) {
+                int rawValue = values[5];
+                int value1 = rightLightReference-rawValue;
 
-                    if(behaviors[TURN_LEFT]) {
-                        turnLeft();
-                    }else if(behaviors[TURN_RIGHT]){
-                        turnRight();
-                    }else if(inputs[1] > 0.2 && inputs[2] <= 0.2) {
+                rawValue = values[4];
+                int value2 = leftLightReference-rawValue;
 
-                        if(count0 > 6){
-                            turnLeft();
-                            steps = 0;
-                        }else {
-                            count0++;
-                            moveForward(inputs);
-                        }
-                    }else if(inputs[1] <= 0.2 && inputs[2] > 0.2) {
-                        if(count0 > 6){
-                            turnRight();
-                            steps = 0;
-                        }else {
-                            count0++;
-                            moveForward(inputs);
-                        }
-                    }else{
-                        moveForward(inputs);
-                    }
+                resetValues();
 
-                }else if(behaviors[TURN_LEFT]) {
-                    turnLeft();
-                }else if(behaviors[TURN_RIGHT]){
-                    turnRight();
-                }else{
-                    moveForward(inputs);
-                    steps++;
-                    count0 = 0;
-                }
+                char b1[20];
+                sprintf(b1,"%d %d %d\n",i,value1,value2);
+                i++;
+                e_send_uart1_char(b1,20);
 
-            }else {
-                if(countTeammate > 50){
-                    stopped = 0;
-                    e_set_led(3,0);
-                    e_set_led(4,1);
-                    e_set_led(5,0);
-                }else if(countTeammate > 0 && inputs[0] < 0.5) {
-                    countTeammate++;
-                    e_set_led(5,1);
-                    e_set_led(3,0);
-                }else if(countTeammate >= 0 && inputs[0] > 0.5) {
-                    e_set_led(3,1);
-                    e_set_led(5,0);
-                    countTeammate = 1;
-                }/*else if(countTeammate > 0 && inputs[0] > 0.5) {
-                    e_set_led(5,0);
-                    e_set_led(3,1);
-                    countTeammate = 1;
-                }*/
-
+            }else{
+                resetValues();
             }
         }
     }
+    
 }
 
-void neuralNetwork() {
-
-    e_set_led(4,1);
-    e_calibrate_ir();
-    lightCalibration();
-    e_set_led(4,0);
-
-    int selector;
-    //int numberOfInputNeurons = 6;
-    //int numberOfOutputNeurons = 3;
-
-    while(1) {
-
-        inputs[0] = 0;
-        inputs[1] = 0;
-        inputs[2] = 0;
-        inputs[3] = 0;
-        inputs[4] = 0;
-        inputs[5] = 0;
-
-        timeStep = 0;
-        createNetworks(1);
-
-        defineNetwork(0,4,10,2);
-        //defineNetwork(1,4,3,2);
-        //defineNetwork(2,4,3,2);
-        //defineNetwork(3,4,3,2);
-
-        setWeights(0, ann);
-        //setWeights(1, corridor);
-        //setWeights(2, left);
-        //setWeights(3, right);
-
-        selector = getSelector();
-        while(selector == getSelector());
-
-        resetValues();
-
-        //if(irsender)
-        //    e_activate_agenda(IRSender, 1000);
-
-        e_activate_agenda(updateFlag, 1000);
-        e_activate_agenda(readValues, 10);
-        e_start_agendas_processing();
-
-        while(1) {
-                while(!flag);
-                flag = 0;
-                //preprogrammedCycle();
-                //regularAnnCycle();
-                hierarquicalAnnCycle();
-        }
-    }
-}
 
 void dummyANN() {
 
     e_calibrate_ir();
     lightCalibration();
+
+    int selector = getSelector();
 
     while(1) {
 
@@ -330,9 +258,9 @@ void dummyANN() {
 
         e_set_led(4,0);
 
-        e_activate_agenda(IRReceiver, 1000);
+        e_activate_agenda(IRReceiver, 5000);
 
-        e_activate_agenda(updateFlag, 1000);
+        e_activate_agenda(updateFlag, 500);//500//1000
         e_activate_agenda(readValues, 10);
         e_start_agendas_processing();
 
@@ -366,14 +294,19 @@ void sendInputs() {
     unsigned short fl = sensorToInput(S_FRONT_LEFT)*1000;
 
     //light
-    unsigned short lf = lightToInput(S_LEFT)*1000;
-    unsigned short lr = lightToInput(S_RIGHT)*1000;
+    unsigned short ll;// = lightToInput(S_LEFT)*1000;
+    unsigned short lr;// = lightToInput(S_RIGHT)*1000;
     
-    unsigned short ft = 0;
+    //unsigned short ft = 0;
 
-    if(foundTeammate > 0 && foundTeammate < foundTeammateSteps) {
-        foundTeammate++;
-        ft = 1000;
+    //if(foundTeammate > 0 && foundTeammate < foundTeammateSteps) {
+    //    foundTeammate++;
+    //    ft = 1000;
+    //}
+
+    if(getSelector() == 6) {
+        ll = lightToInput(S_LEFT)*1000;
+        lr = lightToInput(S_RIGHT)*1000;
     }
 
     resetValues();
@@ -383,9 +316,12 @@ void sendInputs() {
     transmitShort(r);
     transmitShort(l);
     transmitShort(fl);
-    transmitShort(lf);
-    transmitShort(lr);
-    transmitShort(ft);
+
+    if(getSelector() == 6) {
+        transmitShort(ll);
+        transmitShort(lr);
+        //transmitShort(ft);
+    }
 }
 
 void transmitShort(unsigned short i) {
@@ -445,101 +381,6 @@ void updateFlag(void) {
     flag = 1;
 }
 
-void preprogrammedCycle(void) {
-
-    averageValues();
-
-    inputs[0] = sensorToInput(S_FRONT_RIGHT);
-    inputs[1] = sensorToInput(S_RIGHT);
-    inputs[2] = sensorToInput(S_LEFT);
-    inputs[3] = sensorToInput(S_FRONT_LEFT);
-
-    inputs[4] = lightToInput(S_LEFT);
-    inputs[5] = lightToInput(S_RIGHT);
-
-    outputs = computeOutputs(0, inputs);
-
-    int activeBehavior = 999;
-
-    int i;
-    for(i = 0 ; i < 3 ; i++)
-        if(behaviors[i])
-            activeBehavior = i;
-
-    int newBehavior;
-    if(activeBehavior != 999)
-        newBehavior = activeBehavior;
-    else
-        newBehavior = findMaxBehavior(outputs,3);
-
-    applyBehavior(newBehavior,inputs);
-
-    timeStep++;
-
-    resetValues();
-}
-
-void hierarquicalAnnCycle(void) {
-
-    averageValues();
-
-    inputs[0] = sensorToInput(S_FRONT_RIGHT);
-    inputs[1] = sensorToInput(S_RIGHT);
-    inputs[2] = sensorToInput(S_LEFT);
-    inputs[3] = sensorToInput(S_FRONT_LEFT);
-
-    inputs[4] = lightToInput(S_LEFT);
-    inputs[5] = lightToInput(S_RIGHT);
-
-    outputs = computeOutputs(0, inputs);
-
-    int newActiveNetwork = findMaxBehavior(outputs, 3) + 1;
-
-    if(newActiveNetwork != activeNetwork)
-        resetNetwork(newActiveNetwork);
-
-    activeNetwork = newActiveNetwork;
-
-    sendInt(activeNetwork);
-
-    outputs = computeOutputs(activeNetwork, inputs);
-
-    speedLeft = (int)(forwardSpeed*(outputs[0]-0.5)*2.0);
-    speedRight = (int)(forwardSpeed*(outputs[1]-0.5)*2.0);
-
-    e_set_speed_left(speedLeft);
-    e_set_speed_right(speedRight);
-
-    timeStep++;
-    
-    resetValues();
-}
-
-void regularAnnCycle(void) {
-
-    averageValues();
-
-    inputs[0] = sensorToInput(S_FRONT_RIGHT);
-    inputs[1] = sensorToInput(S_RIGHT);
-    inputs[2] = sensorToInput(S_LEFT);
-    inputs[3] = sensorToInput(S_FRONT_LEFT);
-
-    inputs[4] = lightToInput(S_LEFT);
-    inputs[5] = lightToInput(S_RIGHT);
-
-    outputs = computeOutputs(0, inputs);
-
-    speedLeft = (int)(forwardSpeed*(outputs[0]-0.5)*2.0);
-    speedRight = (int)(forwardSpeed*(outputs[1]-0.5)*2.0);
-
-    e_set_speed_left(speedLeft);
-    e_set_speed_right(speedRight);
-
-    timeStep++;
-
-    resetValues();
-}
-
 float sensorToInput(int sensor) {
 
     float value;
@@ -548,6 +389,10 @@ float sensorToInput(int sensor) {
     else if(sensor == S_RIGHT)      value = values[1];
     else if(sensor == S_LEFT)       value = values[2];
     else if(sensor == S_FRONT_LEFT) value = values[3];
+
+    if(lightValues[0][0] > 5 && lightValues[0][1] > 5 && lightValues[0][2] > 5 && sensor == S_LEFT) {
+        return 0.2;
+    }
 
     if(value > sensorReferenceValues[numberOfDistances-1]) {
 
@@ -577,19 +422,40 @@ float lightToInput(int sensorNumber) {
 
     float rawValue;
     float value;
+    int lightIndex = 0;
     
     if(sensorNumber == S_RIGHT){
         rawValue = values[5];
         value = rightLightReference-rawValue;
+
+        lightIndex = 1;
+        lightValues[lightIndex][rightLightIndex] = value;
+        rightLightIndex++;
+        rightLightIndex = rightLightIndex % 3;
     }else if(sensorNumber == S_LEFT) {
         rawValue = values[4];
         value = leftLightReference-rawValue;
+
+        lightValues[lightIndex][leftLightIndex] = value;
+        leftLightIndex++;
+        leftLightIndex = leftLightIndex % 3;
     }
 
     float result = 0;
 
-    if(value > lightThreshold && lightSeen < 2)
+    int above5 = 0;
+
+    int i;
+    for(i = 0 ; i < 3 ; i++) {
+        if(lightValues[lightIndex][i] > 5)
+            above5++;
+    }
+
+    if(above5 == 3 && lightSeen < 2)
         result = 1;
+
+    //if(value > lightThreshold && lightSeen < 2 && sensorEnabled)
+    //    result = 1;
 
     float lastValue = 0;
     if(sensorNumber == S_RIGHT) lastValue = lastLight2;
@@ -606,8 +472,8 @@ float lightToInput(int sensorNumber) {
     } else if(lastValue == 0)
         currentFixedTimeSteps[index] = 0;
 
-    //if(lastValue == 0 && result == 1)
-    //    lightSeen++;
+    if(lastValue == 0 && result == 1)
+        lightSeen++;
 
     if(sensorNumber == S_RIGHT) lastLight2 = result;
     if(sensorNumber == S_LEFT) lastLight5 = result;
@@ -628,13 +494,13 @@ float lightToInput(int sensorNumber) {
 }
 
 void resetValues() {
-    lockReading = 0;
     values[0]=0;
     values[1]=0;
     values[2]=0;
     values[3]=0;
     values[4]=0;
     values[5]=0;
+    lockReading = 0;
     readTimes = 0;
 }
 
@@ -651,6 +517,7 @@ void readValues() {
 }
 
 void averageValues() {
+
     lockReading = 1;
     if(readTimes > 0) {
         values[0] = values[0]/readTimes;
@@ -789,22 +656,6 @@ void turnRight() {
     }
 }
 
-void cameraTest() {
-    /* char buffer[160*2];
-
-    e_po3030k_init_cam();
-    e_po3030k_config_cam((ARRAY_WIDTH -160)/2,(ARRAY_HEIGHT-160)/2,
-                     160,160,4,4,RGB_565_MODE);
-    e_po3030k_write_cam_registers();
-
-    e_po3030k_launch_capture(buffer);
-
-    while(1) {
-        while(!e_po3030k_is_img_ready());
-        sendString(buffer);
-    }*/
-}
-
 void IRReceiver() {
 
     if(!foundTeammate) {
@@ -840,14 +691,14 @@ void IRSender() {
         e_randb_send_all_data(1);
 
     //e_randb_uart_send_all_data(data);
-/*    if(!foundTeammate) {
-        if(sensorToInput(0) > 0.3 || sensorToInput(7) > 0.3) {
-            foundTeammate = 1;
-        }
-    }
+    //if(!foundTeammate) {
+    //    if(sensorToInput(0) > 0.3 || sensorToInput(7) > 0.3) {
+    //        foundTeammate = 1;
+    //    }
+    //}
 
-    if(foundTeammate && sensorToInput(0) == 0)
-        stopped = 0;*/
+    //if(foundTeammate && sensorToInput(0) == 0)
+    //    stopped = 0;
     //sendInt(data);
 }
 
@@ -856,4 +707,271 @@ void setupRBB() {
     e_randb_set_range(170);
     e_randb_set_calculation(ON_BOARD);
     e_randb_store_light_conditions();
+}
+
+void neuralNetwork() {
+
+    e_set_led(4,1);
+    e_calibrate_ir();
+    lightCalibration();
+    e_set_led(4,0);
+
+    int selector;
+    //int numberOfInputNeurons = 6;
+    //int numberOfOutputNeurons = 3;
+
+    while(1) {
+
+        inputs[0] = 0;
+        inputs[1] = 0;
+        inputs[2] = 0;
+        inputs[3] = 0;
+        inputs[4] = 0;
+        inputs[5] = 0;
+
+        timeStep = 0;
+        createNetworks(1);
+
+        defineNetwork(0,6,10,3);
+        //defineNetwork(1,4,3,2);
+        //defineNetwork(2,4,3,2);
+        //defineNetwork(3,4,3,2);
+
+        setWeights(0, ann);
+        //setWeights(1, corridor);
+        //setWeights(2, left);
+        //setWeights(3, right);
+
+        selector = getSelector();
+        while(selector == getSelector());
+
+        resetValues();
+
+        //if(irsender)
+        //    e_activate_agenda(IRSender, 1000);
+
+        e_activate_agenda(updateFlag, 1000);
+        e_activate_agenda(readValues, 10);
+        e_start_agendas_processing();
+
+        while(1) {
+                while(!flag);
+                flag = 0;
+                
+                preprogrammedCycle();
+
+                //regularAnnCycle();
+                //hierarquicalAnnCycle();
+        }
+    }
+}
+
+void hierarquicalAnnCycle(void) {
+
+    averageValues();
+
+    inputs[0] = sensorToInput(S_FRONT_RIGHT);
+    inputs[1] = sensorToInput(S_RIGHT);
+    inputs[2] = sensorToInput(S_LEFT);
+    inputs[3] = sensorToInput(S_FRONT_LEFT);
+
+    inputs[4] = lightToInput(S_LEFT);
+    inputs[5] = lightToInput(S_RIGHT);
+
+    outputs = computeOutputs(0, inputs);
+
+    int newActiveNetwork = findMaxBehavior(outputs, 3) + 1;
+
+    if(newActiveNetwork != activeNetwork)
+        resetNetwork(newActiveNetwork);
+
+    activeNetwork = newActiveNetwork;
+
+    sendInt(activeNetwork);
+
+    outputs = computeOutputs(activeNetwork, inputs);
+
+    speedLeft = (int)(forwardSpeed*(outputs[0]-0.5)*2.0);
+    speedRight = (int)(forwardSpeed*(outputs[1]-0.5)*2.0);
+
+    e_set_speed_left(speedLeft);
+    e_set_speed_right(speedRight);
+
+    timeStep++;
+
+    resetValues();
+}
+
+void regularAnnCycle(void) {
+
+    averageValues();
+
+    inputs[0] = sensorToInput(S_FRONT_RIGHT);
+    inputs[1] = sensorToInput(S_RIGHT);
+    inputs[2] = sensorToInput(S_LEFT);
+    inputs[3] = sensorToInput(S_FRONT_LEFT);
+
+    inputs[4] = lightToInput(S_LEFT);
+    inputs[5] = lightToInput(S_RIGHT);
+
+    outputs = computeOutputs(0, inputs);
+
+    speedLeft = (int)(forwardSpeed*(outputs[0]-0.5)*2.0);
+    speedRight = (int)(forwardSpeed*(outputs[1]-0.5)*2.0);
+
+    e_set_speed_left(speedLeft);
+    e_set_speed_right(speedRight);
+
+    timeStep++;
+
+    resetValues();
+}
+
+void preprogrammedCycle(void) {
+
+    averageValues();
+
+    inputs[0] = sensorToInput(S_FRONT_RIGHT);
+    inputs[1] = sensorToInput(S_RIGHT);
+    inputs[2] = sensorToInput(S_LEFT);
+    inputs[3] = sensorToInput(S_FRONT_LEFT);
+
+    inputs[4] = lightToInput(S_LEFT);
+    inputs[5] = lightToInput(S_RIGHT);
+
+    outputs = computeOutputs(0, inputs);
+
+    int activeBehavior = 999;
+
+    int i;
+    for(i = 0 ; i < 3 ; i++)
+        if(behaviors[i])
+            activeBehavior = i;
+
+    int newBehavior;
+    if(activeBehavior != 999)
+        newBehavior = activeBehavior;
+    else
+        newBehavior = findMaxBehavior(outputs,3);
+
+    applyBehavior(newBehavior,inputs);
+
+    timeStep++;
+
+    resetValues();
+}
+
+
+void goBack() {
+
+    e_set_led(4,1);
+    e_calibrate_ir();
+    lightCalibration();
+    e_set_led(4,0);
+
+   int selector;
+
+    while(1) {
+
+        inputs[0] = 0;
+        inputs[1] = 0;
+        inputs[2] = 0;
+        inputs[3] = 0;
+        inputs[4] = 0;
+        inputs[5] = 0;
+
+        timeStep = 0;
+
+        selector = getSelector();
+        while(selector == getSelector());
+
+        resetValues();
+
+        e_activate_agenda(IRSender, 500);
+
+        e_activate_agenda(updateFlag, 1000);
+        e_activate_agenda(readValues, 10);
+        e_start_agendas_processing();
+
+        int steps = 0;
+
+        int count0 = 0;
+        stopped = 1;
+        int countTeammate = 0;
+
+        while(1) {
+            while(!flag);
+            flag = 0;
+
+            averageValues();
+
+            inputs[0] = sensorToInput(S_FRONT_RIGHT);
+            inputs[1] = sensorToInput(S_RIGHT);
+            inputs[2] = sensorToInput(S_LEFT);
+            inputs[3] = sensorToInput(S_FRONT_LEFT);
+
+            resetValues();
+
+            if(!stopped) {
+
+                if(steps > 50 && !behaviors[TURN_LEFT] && !behaviors[TURN_RIGHT]) {
+
+                    if(behaviors[TURN_LEFT]) {
+                        turnLeft();
+                    }else if(behaviors[TURN_RIGHT]){
+                        turnRight();
+                    }else if(inputs[1] > 0.2 && inputs[2] <= 0.2) {
+
+                        if(count0 > 6){
+                            turnLeft();
+                            steps = 0;
+                        }else {
+                            count0++;
+                            moveForward(inputs);
+                        }
+                    }else if(inputs[1] <= 0.2 && inputs[2] > 0.2) {
+                        if(count0 > 6){
+                            turnRight();
+                            steps = 0;
+                        }else {
+                            count0++;
+                            moveForward(inputs);
+                        }
+                    }else{
+                        moveForward(inputs);
+                    }
+
+                }else if(behaviors[TURN_LEFT]) {
+                    turnLeft();
+                }else if(behaviors[TURN_RIGHT]){
+                    turnRight();
+                }else{
+                    moveForward(inputs);
+                    steps++;
+                    count0 = 0;
+                }
+
+            }else {
+                if(countTeammate > 50){
+                    stopped = 0;
+                    e_set_led(3,0);
+                    e_set_led(4,1);
+                    e_set_led(5,0);
+                }else if(countTeammate > 0 && inputs[0] < 0.5) {
+                    countTeammate++;
+                    e_set_led(5,1);
+                    e_set_led(3,0);
+                }else if(countTeammate >= 0 && inputs[0] > 0.5) {
+                    e_set_led(3,1);
+                    e_set_led(5,0);
+                    countTeammate = 1;
+                }//else if(countTeammate > 0 && inputs[0] > 0.5) {
+                //    e_set_led(5,0);
+                //    e_set_led(3,1);
+                //    countTeammate = 1;
+                //}
+
+            }
+        }
+    }
 }

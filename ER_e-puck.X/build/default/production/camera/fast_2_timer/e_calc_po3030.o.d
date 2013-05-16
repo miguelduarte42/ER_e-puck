@@ -1,5 +1,6 @@
-build/default/production/camera/fast_2_timer/e_calc.o:  \
- camera/fast_2_timer/e_calc.c camera/fast_2_timer/e_po3030k.h \
+build/default/production/camera/fast_2_timer/e_calc_po3030.o:  \
+ camera/fast_2_timer/e_calc_po3030.c camera/fast_2_timer/e_poxxxx.h \
+  camera/fast_2_timer/e_po3030k.h \
   camera/fast_2_timer/../../motor_led/e_epuck_ports.h \
   camera/fast_2_timer/../../I2C/e_I2C_protocol.h \
   camera/fast_2_timer/../../I2C/e_I2C_master_module.h \

@@ -25,7 +25,7 @@ unsigned short receiveMessage() {
 
 unsigned char receiveSingleChar() {
     unsigned char c;
-    while(e_getchar_uart1(&c) <= 0);
+    while(!e_getchar_uart1(&c));
     return c;
 }
 

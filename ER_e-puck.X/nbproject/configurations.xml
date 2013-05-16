@@ -15,10 +15,12 @@
       <itemPath>motor_led/advance_one_timer/e_led.h</itemPath>
       <itemPath>motor_led/advance_one_timer/e_motors.h</itemPath>
       <itemPath>camera/fast_2_timer/e_po3030k.h</itemPath>
+      <itemPath>camera/fast_2_timer/e_po6030k.h</itemPath>
       <itemPath>a_d/advance_ad_scan/e_prox.h</itemPath>
       <itemPath>e_randb.h</itemPath>
       <itemPath>uart/e_uart_char.h</itemPath>
       <itemPath>main_c.h</itemPath>
+      <itemPath>search_ball.h</itemPath>
       <itemPath>utilities.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LibraryFiles"
@@ -37,26 +39,34 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>btcom.c</itemPath>
+      <itemPath>cam_test.c</itemPath>
+      <itemPath>camtest2.c</itemPath>
       <itemPath>ctrhnnmultilayercontroller.c</itemPath>
       <itemPath>I2C/e_I2C_master_module.c</itemPath>
       <itemPath>I2C/e_I2C_protocol.c</itemPath>
       <itemPath>a_d/advance_ad_scan/e_ad_conv.c</itemPath>
       <itemPath>motor_led/advance_one_timer/e_agenda.c</itemPath>
-      <itemPath>camera/fast_2_timer/e_calc.c</itemPath>
+      <itemPath>camera/fast_2_timer/e_calc_po3030.c</itemPath>
+      <itemPath>camera/fast_2_timer/e_calc_po6030k.c</itemPath>
+      <itemPath>camera/fast_2_timer/e_common.c</itemPath>
       <itemPath>motor_led/e_init_port.c</itemPath>
       <itemPath>uart/e_init_uart1.s</itemPath>
       <itemPath>uart/e_init_uart2.s</itemPath>
+      <itemPath>camera/fast_2_timer/e_interrupt.s</itemPath>
       <itemPath>motor_led/advance_one_timer/e_led.c</itemPath>
       <itemPath>motor_led/advance_one_timer/e_motors.c</itemPath>
+      <itemPath>camera/fast_2_timer/e_po3030k_registers.c</itemPath>
+      <itemPath>camera/fast_2_timer/e_po6030k_registers.c</itemPath>
       <itemPath>a_d/advance_ad_scan/e_prox.c</itemPath>
       <itemPath>e_randb.c</itemPath>
-      <itemPath>camera/fast_2_timer/e_registers.c</itemPath>
       <itemPath>camera/fast_2_timer/e_timers.c</itemPath>
       <itemPath>uart/e_uart1_rx_char.s</itemPath>
       <itemPath>uart/e_uart1_tx_char.s</itemPath>
       <itemPath>uart/e_uart2_rx_char.s</itemPath>
       <itemPath>uart/e_uart2_tx_char.s</itemPath>
       <itemPath>main_c.c</itemPath>
+      <itemPath>runfollowball.c</itemPath>
+      <itemPath>search_ball.c</itemPath>
       <itemPath>utilities.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -71,7 +81,7 @@
         <developmentServer>localhost</developmentServer>
         <targetDevice>dsPIC30F6014A</targetDevice>
         <targetHeader></targetHeader>
-        <platformTool>ICD2PlatformTool</platformTool>
+        <platformTool>ICD3PlatformTool</platformTool>
         <languageToolchain>C30</languageToolchain>
         <languageToolchainVersion>3_30</languageToolchainVersion>
         <platform>4</platform>
@@ -83,8 +93,42 @@
         </linkerTool>
       </compileType>
       <C30>
+        <property key="optimization-level" value="0"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="code-model" value="large-code"/>
+        <property key="const-model" value="default"/>
+        <property key="enable-procedural-abstraction" value="false"/>
+        <property key="enable-ansi-warnings" value="false"/>
+        <property key="enable-short-double" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="data-model" value="default"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="enable-fatal-warnings" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-ansi-std" value="false"/>
+        <property key="enable-all-warnings" value="false"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="scalar-model" value="default"/>
       </C30>
       <C30-AS>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="list-file" value=""/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="relax" value="false"/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value="emit-warnings"/>
+        <property key="list-section-info" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="false-conditionals" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="assembler-symbols" value=""/>
       </C30-AS>
       <C30-LD>
         <property key="preprocessor-macros" value=""/>
@@ -117,9 +161,59 @@
         <property key="extra-lib-directories" value=""/>
       </C30-LD>
       <C30Global>
+        <property key="fast-math" value="false"/>
+        <property key="legacy-libc" value="false"/>
       </C30Global>
-      <ICD2PlatformTool>
-      </ICD2PlatformTool>
+      <ICD3PlatformTool>
+        <property key="UART 2" value="true"/>
+        <property key="UART 1" value="true"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="memories.id" value="false"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="memories.eeprom" value="false"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="INPUT CAPTURE 8" value="true"/>
+        <property key="INPUT CAPTURE 7" value="true"/>
+        <property key="INPUT CAPTURE 6" value="true"/>
+        <property key="INPUT CAPTURE 5" value="true"/>
+        <property key="INPUT CAPTURE 4" value="true"/>
+        <property key="INPUT CAPTURE 3" value="true"/>
+        <property key="INPUT CAPTURE 2" value="true"/>
+        <property key="INPUT CAPTURE 1" value="true"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="OUTPUT COMPARE 8" value="true"/>
+        <property key="OUTPUT COMPARE 7" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="OUTPUT COMPARE 6" value="true"/>
+        <property key="OUTPUT COMPARE 5" value="true"/>
+        <property key="OUTPUT COMPARE 4" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="OUTPUT COMPARE 3" value="true"/>
+        <property key="OUTPUT COMPARE 2" value="true"/>
+        <property key="DCI" value="true"/>
+        <property key="OUTPUT COMPARE 1" value="true"/>
+        <property key="poweroptions.powerenable" value="true"/>
+        <property key="memories.programmemory.start" value="0x0"/>
+        <property key="I2C" value="true"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x0"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="ADC" value="true"/>
+        <property key="voltagevalue" value="5.0"/>
+        <property key="TIMER5" value="true"/>
+        <property key="memories.programmemory.end" value="0x17fff"/>
+        <property key="TIMER4" value="true"/>
+        <property key="TIMER3" value="true"/>
+        <property key="SPI 2" value="true"/>
+        <property key="TIMER2" value="true"/>
+        <property key="SPI 1" value="true"/>
+        <property key="TIMER1" value="true"/>
+        <property key="programoptions.preserveprogramrange.end" value="0xff"/>
+      </ICD3PlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>
